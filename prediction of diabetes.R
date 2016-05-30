@@ -7,6 +7,22 @@ attach(data)
 data$diabetes=as.numeric(data$diabetes)-1
 head(data)
 cor(data)
+#--------------------------Exploring data-------------------------------------
+#Results are provided
+library(ggplot2)
+cor(diabetes,glucose)   #it's 0.5
+ggplot(data,aes(x=glucose,y=diabetes))+geom_point()+geom_smooth()
+cor(diabetes,pressure)  #it's 0.1926733
+ggplot(data,aes(x=pressure,y=diabetes))+geom_point()+geom_smooth()
+cor(diabetes,insulin)   #it's 0.3
+ggplot(data,aes(x=insulin,y=diabetes))+geom_point()+geom_smooth()
+cor(diabetes,age)       #it's 0.35
+ggplot(data,aes(x=age,y=diabetes))+geom_point()+geom_smooth()
+cor(diabetes,pedigree)  #it's 0.21
+ggplot(data,aes(x=pedigree,y=diabetes))+geom_point()+geom_smooth()
+
+ggplot(data=data,aes(x=age,y=glucose,col=diabetes))+geom_point()
+#Results are provided
 #-------------------------------------------------------
 #Logistic regression
 
