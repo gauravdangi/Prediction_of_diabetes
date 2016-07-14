@@ -31,10 +31,6 @@ ggplot(data,aes(x=pedigree,y=diabetes))+geom_point()+geom_smooth()
 
 ggplot(data=data,aes(x=age,y=glucose,col=diabetes))+geom_point()
 
-plot_ly(data=data,x=age,y=glucose,z=insulin,
-        color = diabetes,
-        type = "scatter3d")
-        
 diabetes<-as.numeric(diabetes)
 cor(mass,diabetes)
 
