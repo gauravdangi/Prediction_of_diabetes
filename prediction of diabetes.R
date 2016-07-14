@@ -191,12 +191,4 @@ text(fit, use.n=TRUE, all=TRUE, cex=.8)
 # create attractive postscript plot of tree 
 post(fit, file = "c:/tree.ps", title = "Classification Tree for diabetes")
 =======
-library(mlbench)
-data("PimaIndiansDiabetes2")
-head(PimaIndiansDiabetes2)
-data=na.omit(PimaIndiansDiabetes2)
-head(data)
-attach(data)
-data$diabetes=as.numeric(data$diabetes)-1
-head(data)
-cor(data)
+
