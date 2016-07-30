@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+# @Gaurav Dangi
 library(mlbench)
 library(ggplot2)
 library(caret)
@@ -192,3 +193,4 @@ text(fit, use.n=TRUE, all=TRUE, cex=.8)
 post(fit, file = "c:/tree.ps", title = "Classification Tree for diabetes")
 =======
 
+# @Gaurav Dangi
