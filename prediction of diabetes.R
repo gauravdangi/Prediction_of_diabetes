@@ -106,14 +106,6 @@ confusionMatrix(q,testing$diabetes)
 comp<-ftable(q,testing$diabetes)
 accuracy<-(sum(diag(comp))/sum(comp))*100
 accuracy   # ----65.2% -------
-#--- when gamma =1 -----
-#             Reference
-#    Prediction   0   1
-#             0 150  80       
-#             1   0   0
-#------------------------
-# So above svm model is predicting 0 for every value for gamma= 1
-
 
 set.seed(1234)
 reg3=svm(diabetes~.,data=training,kernel="linear",cost = 1,scale=F)
@@ -163,15 +155,6 @@ table(diabetes,k$cluster)
 par(mfrow=c(1,2))
 plot(x=training$age,y=training$glucose,col=diabetes,main = "Age vs Glucose")
 plot(x=training$age,y=training$glucose,col=k$cluster,main = "Cluster analysis of Age vs Glucose")
-
-#-----------------------------------------------------------
-#K-Nearest Neighbour
-
-
-
-
-
-
 
 #------------------------------------------------------------
 #Desision tree
