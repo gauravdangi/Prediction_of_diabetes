@@ -88,7 +88,7 @@ levels(testing$diabetes)
 confusionMatrix(q,testing$diabetes)
 
 accuracy<-(1-mean(q!=testing$diabetes))*100
-accuracy  # 75.52%
+accuracy  # 85.52%
 
 #--------------------------------------------------------
 #Using Support vector machine algorithm(SVM)
@@ -105,7 +105,7 @@ q
 confusionMatrix(q,testing$diabetes)
 comp<-ftable(q,testing$diabetes)
 accuracy<-(sum(diag(comp))/sum(comp))*100
-accuracy   # ----65.2% -------
+accuracy   # ----72.2% -------
 
 set.seed(1234)
 reg3=svm(diabetes~.,data=training,kernel="linear",cost = 1,scale=F)
@@ -118,7 +118,7 @@ comp<-ftable(q,testing$diabetes)
 accuracy<-(sum(diag(comp))/sum(comp))*100
 accuracy
 
-#----------  74.34 %  ----------------------
+#----------  79.34 %  ----------------------
 
 
 #--------------------------------------------------------
