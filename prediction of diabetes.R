@@ -43,24 +43,18 @@ ggplot(data=data,aes(x=age,y=glucose,col=diabetes))+geom_point()
 cor(mass,diabetes)
 
 diabetes<-as.factor(diabetes)
-#AmeliaView()
-# too many missing values in insulin, triceps and pressure so i will not include these features
-#As missing variables don't have high correlation with diabetes variable and too many missing values
 
 PimaIndiansDiabetes2$insulin<-NULL;data$insulin<-NULL
 PimaIndiansDiabetes2$triceps<-NULL;data$triceps<-NULL
 PimaIndiansDiabetes2$pressure<-NULL;data$pressure<-NULL
 
 #Now we can apply imputation to rest of the few missing values
-write.csv(PimaIndiansDiabetes2,"PimaIndiansDiabetes2.csv")
-#AmeliaView()
-PimaIndiansDiabetes2 <- read.csv("PimaIndiansDiabetes2-imp1.csv")
+#write.csv(PimaIndiansDiabetes2,"PimaIndiansDiabetes2.csv")
 
-PimaIndiansDiabetes2 <- read_csv("D:/Projects/R Projects/Diabetes_prediction/PimaIndiansDiabetes2.csv")
+
+#PimaIndiansDiabetes2 <- read_csv("PimaIndiansDiabetes2.csv")
 sapply(PimaIndiansDiabetes2,class)
 
-
-PimaIndiansDiabetes2$X1<-NULL
 PimaIndiansDiabetes2$pregnant<-as.numeric(PimaIndiansDiabetes2$pregnant)
 PimaIndiansDiabetes2$glucose<-as.numeric(PimaIndiansDiabetes2$glucose)
 PimaIndiansDiabetes2$age<-as.numeric(PimaIndiansDiabetes2$age)
